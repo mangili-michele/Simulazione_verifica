@@ -10,7 +10,8 @@ IN DN PN
 
 La prima riga contiene il numero N dei processi. Seguono N righe, per ciascuna delle quali è leggibile l'id del processo (I, primo numero), la durata (D, secondo numero) e la priorità (P, terzo numero). Il processo a priorità più alta va eseguito per primo, e a parità di priorità si prende il processo con durata minore. Non c'è pre-emption.
 
-Il programma deve stampare a video la lista degli ID di tutti i processi nell'ordine in cui verranno eseguiti.
+Il programma deve stampare a video la lista degli ID di tutti i processi nell'ordine in cui verranno eseguiti.*/
+
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -29,6 +30,8 @@ struct Processo
 void schedulaProcessiES1(vector<Processo> vettProcessi) 
 {
     //SCRIVI QUI IL CODICE PER L'ESERCIZIO 1
+    for(int i = 0; i < vettProcessi.size(); i++)
+    {}
 
     
 }
@@ -73,7 +76,8 @@ int main()
     schedulaProcessiES2(vettProcessi);
     return 0;
 }
-*/
+
+/*
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -117,7 +121,7 @@ int main() {
 
     return 0;
 }
-
+*/
 
 
 
