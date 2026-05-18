@@ -97,7 +97,7 @@ void schedulaProcessiES2(vector<Processo> vettProcessi)
 
     }
 
-    
+
     
 
     
@@ -137,88 +137,6 @@ int main()
     return 0;
 }
 
-/*
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <algorithm>
-
-struct Process {
-    int id;
-    int duration;
-    int priority;
-};
-
-bool compare(Process a, Process b) {
-    if (a.priority == b.priority) {
-        return a.duration < b.duration; // Se le priorità sono uguali, ordina per durata
-    }
-    return a.priority > b.priority; // Altrimenti, ordina per priorità
-}
-
-int main() {
-    std::ifstream inputFile("input.txt");
-    if (!inputFile) {
-        std::cerr << "Errore nell'apertura del file!" << std::endl;
-        return 1;
-    }
-
-    int N;
-    inputFile >> N;
-
-    std::vector<Process> processes(N);
-    for (int i = 0; i < N; ++i) {
-        inputFile >> processes[i].id >> processes[i].duration >> processes[i].priority;
-    }
-
-    // Ordina i processi in base alla priorità e alla durata
-    std::sort(processes.begin(), processes.end(), compare);
-
-    // Stampa l'ordine di esecuzione dei processi
-    for (const auto& process : processes) {
-        std::cout << process.id << std::endl;
-    }
-
-    return 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-int inizio , fine;
-
-        if(tempo_corrente < vettProcessi[i].arrivo)
-        {
-            inizio = vettProcessi.size();
-
-        }
-        else{
-
-            inizio=tempo_corrente;
-
-        }
-
-        fine= inizio + vettProcessi[i].durata;
-
-        tempo_corrente = fine;
-
-        
-        cout << vettProcessi [i].id << inizio <<" "<< fine << endl;
-    
-    
-    
-    
-    }
-
-     cout << endl;
-*/
 
 
 
