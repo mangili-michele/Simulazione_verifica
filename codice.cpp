@@ -29,17 +29,77 @@ struct Processo
 
 void schedulaProcessiES1(vector<Processo> vettProcessi) 
 {
+    int tempo_corrente = 0;
+    cout << "es 1"<< endl;
     //SCRIVI QUI IL CODICE PER L'ESERCIZIO 1
-    for(int i = 0; i < vettProcessi.size(); i++)
-    {}
+    for(int i = 0; i < vettProcessi.size(); i++){
 
+        int Pa = vettProcessi[i].arrivo;
+        int Pd = vettProcessi[i].durata;
+        int Pp = vettProcessi[i].priorita;
+
+        if(Pa == 0)
+        {
+            tempo_corrente = Pd;
+            cout << vettProcessi [i].id << " " << Pa <<" "<< tempo_corrente << endl;
+        }
+        else
+        {
+            if(tempo_corrente < Pa)
+            {
+                tempo_corrente = Pa + Pd;
+                cout << vettProcessi [i].id << " " << Pa <<" "<< tempo_corrente << endl;
+            }
+            else
+            {
+                tempo_corrente += Pd;
+                cout << vettProcessi [i].id << " " << Pa <<" "<< tempo_corrente << endl;
+            }
+        }
+
+ 
     
 }
+
+
+
 
 void schedulaProcessiES2(vector<Processo> vettProcessi) 
 {   
     //SCRIVI QUI IL CODICE PER L'ESERCIZIO 2
+
+    int tempo_corrente = 0;
+    cout << "es 2"<< endl;
+    for(int i = 0; i < vettProcessi.size(); i++){
+        
+        int Pa = vettProcessi[i].arrivo;
+        int Pd = vettProcessi[i].durata;
+        int Pp = vettProcessi[i].priorita;
+
+        if(Pa == 0)
+        {
+            tempo_corrente = Pd;
+            cout << vettProcessi [i].id << " " << Pa <<" "<< tempo_corrente << endl;
+        }
+        else
+        {
+            if(tempo_corrente < Pa)
+            {
+                tempo_corrente = Pa + Pd;
+                cout << vettProcessi [i].id << " " << Pa <<" "<< tempo_corrente << endl;
+            }
+            else
+            {
+                tempo_corrente += Pd;
+                cout << vettProcessi [i].id << " " << Pa <<" "<< tempo_corrente << endl;
+            }
+        }
+
+    }
+
     
+    
+
     
 }
 
@@ -121,6 +181,43 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+int inizio , fine;
+
+        if(tempo_corrente < vettProcessi[i].arrivo)
+        {
+            inizio = vettProcessi.size();
+
+        }
+        else{
+
+            inizio=tempo_corrente;
+
+        }
+
+        fine= inizio + vettProcessi[i].durata;
+
+        tempo_corrente = fine;
+
+        
+        cout << vettProcessi [i].id << inizio <<" "<< fine << endl;
+    
+    
+    
+    
+    }
+
+     cout << endl;
 */
 
 
